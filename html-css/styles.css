@@ -18,10 +18,30 @@ the font is called 'nunito' and can be found on google fonts
   box-sizing: border-box;
 }
 
-header {
+.flex {
   display: flex;
 }
+ /* Header */
 
-nav ul {
-  display: flex;
+/* Main */
+main {
+  flex-direction: row;
+  align-content: space-around;
+}
+
+#main {
+  width: 70%;
+}
+
+#gallery {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.placeholder-img {
+  height: 100px;
+}
+
+#sidebar {
+  width: 20%;
 }

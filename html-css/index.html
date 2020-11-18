@@ -7,10 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  <header>
+  <header class="flex">
     <h1>Devmountain Daily</h1>
     <nav>
-      <ul>
+      <ul class="flex">
         <li>Home</li>
         <li>Topics</li>
         <li>Subscribe</li>
@@ -19,20 +19,57 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ut eligendi repellendus dignissimos nesciunt vitae, ea alias impedit ab numquam quia, doloribus voluptatibus quas quisquam tempore! Repellendus, ipsum praesentium! Quod.</p>
+  <main class="flex">
+    <section id="main">
+      <article>
+        <h3>Skills Check 2</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ut eligendi repellendus dignissimos nesciunt vitae, ea alias impedit ab numquam quia, doloribus voluptatibus quas quisquam tempore! Repellendus, ipsum praesentium! Quod.</p>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti quas. Veritatis officia expedita ea fuga adipisci, totam, accusantium reprehenderit, ipsa rem beatae obcaecati neque est dolor nobis corrupti debitis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti quas. Veritatis officia expedita ea fuga adipisci, totam, accusantium reprehenderit, ipsa rem beatae obcaecati neque est dolor nobis corrupti debitis.</p>
 
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti impedit sit ab maiores excepturi animi cumque ut accusantium, recusandae a numquam, dolore consectetur blanditiis et! Velit ratione labore perferendis quae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti impedit sit ab maiores excepturi animi cumque ut accusantium, recusandae a numquam, dolore consectetur blanditiis et! Velit ratione labore perferendis quae?</p>
+      </article>
+
+      <div>
+        <h4>Image Gallery</h4>
+        <a href="#">View Larger</a>
+        <div id="gallery" class="flex">
+          <img src="./placeholder.svg" alt="Image 1" class="placeholder-img">
+          <img src="./placeholder.svg" alt="Image 2" class="placeholder-img">
+          <img src="./placeholder.svg" alt="Image 3" class="placeholder-img">
+          <img src="./placeholder.svg" alt="Image 4" class="placeholder-img">
+          <img src="./placeholder.svg" alt="Image 5" class="placeholder-img">
+          <img src="./placeholder.svg" alt="Image 6" class="placeholder-img">
+        </div>
+      </div>
     </section>
-    <aside>
+
+    <aside id="sidebar">
       <div>
         <img src="#" alt="Avatar">
         <h3>Your Name</h3>
       </div>
+      <div>
+        <h4>Popular Articles</h4>
+        <ol>
+          <li>JavaScript 3</li>
+          <li>CSS Tips & Tricks</li>
+          <li>Array Methods</li>
+          <li>JavaScript 2</li>
+          <li>Semantic HTML</li>
+          <li>Best Bootcamps</li>
+          <li>HTML & CSS 2</li>
+          <li>Higher Order Functions</li>
+          <li>Context</li>
+          <li>FlexBox</li>
+        </ol>
+      </div>
     </aside>
+
   </main>
+  <footer>
+    <p>Learn to Code at Devmountain!</p>
+    <img src="#" alt="Ask a question icon">
+  </footer>
 </body>
 </html>
