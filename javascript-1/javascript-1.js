@@ -224,10 +224,10 @@ for (let i = 0; i < lettersToPair.length; i++) {
 
 //CODE HERE
 function Dog (name, age, breed, tricks) {
-    this.name = name,
-    this.age = age,
-    this.breed = breed,
-    this.tricks = tricks
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
 }
 
 /*
@@ -247,7 +247,9 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-
+function bark () {
+    return `${this.name} says bark!`;
+}
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -255,8 +257,9 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
+let fidoSpeak = bark.call(fido);
   
-  
+
 ////////////////////PROBLEM 13////////////////////
 /*
     Write a function called 'teachTrick' that will take in one parameter, trick, 
@@ -266,7 +269,10 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-
+function teachTrick (trick) {
+    this.tricks.push(trick);
+    return this.tricks;
+}
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -274,8 +280,9 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
+let teachStay = teachTrick.bind(fido, 'stay');
   
-  
+
 ////////////////////PROBLEM 14////////////////////
 /*
     Write a function called 'dogIntro' that will take in two parameters, treat and toy,
@@ -285,7 +292,9 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-
+function dogIntro (treat, toy) {
+    return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`
+}
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -294,7 +303,7 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-  
+let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -304,7 +313,13 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-
+function Phone(brand, model, storage, color, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.sold = sold;
+}
   
 /*
     Next make three new phones using your constructor function.
@@ -318,11 +333,11 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = new Phone('Apple', 'iPhone 12 Pro', 256, 'Blue', false);
   
-  // let phone2 = 
+  let phone2 = new Phone('Samsung', 'Galaxy Z Fold 2', 256, 'Black', false);
   
-  // let phone3 = 
+  let phone3 = new Phone('Microsoft', 'Surface Duo', 256, 'White', false);
   
 /*
     Last, add a prototype method to Phone.
@@ -333,5 +348,7 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-
-  
+Phone.prototype.sell = function() {
+    this.sold = true;
+    return `${this.brand} ${this.model} has been sold.`
+}
