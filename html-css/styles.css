@@ -17,3 +17,11 @@ the font is called 'nunito' and can be found on google fonts
   padding: 0;
   box-sizing: border-box;
 }
+
+header {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+}

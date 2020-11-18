@@ -81,7 +81,7 @@ let compareNums = (num1, num2) => {
 */
 
 //CODE HERE
-let bestMovie = movieTitle => `${movieTitle} is the best movie ever!`;
+let bestMovie = movie => `${movie} is the best movie ever!`;
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -132,9 +132,9 @@ delete gameInfo.rating;
 */
 
 //CODE HERE
-for (let shape in shapes) {
-    if (shapes[shape] % 2 !== 0) {
-        delete shapes[shape];
+for (let prop in shapes) {
+    if (shapes[prop] % 2 !== 0) {
+        delete shapes[prop];
     }    
 }
   
@@ -179,9 +179,9 @@ const classes = [
 
 //CODE HERE
 for (let i = 0; i < classes.length; i++) {
-    for (let key in classes[i]) {
-        if (classes[i][key] === true) {
-            classes[i][key] = false;
+    for (let prop in classes[i]) {
+        if (classes[i][prop] === true) {
+            classes[i][prop] = false;
         }
     }
 }
