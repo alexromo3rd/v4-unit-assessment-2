@@ -45,3 +45,19 @@ nameInput.addEventListener('change', () => {
 emailInput.addEventListener('change', () => {
   emailInput.style.border = 'none';
 });
+
+let cart = document.createElement('div');
+let main = document.querySelector('main');
+let cartItems = 0;
+
+let addToCart = () => {
+  if (cartItems === 0) {
+    cartItems = 1;
+    cart.setAttribute('class', 'cart-display');
+    cart.innerText = 'Your Cart: 1 item';
+    main.appendChild(cart);
+  } else {
+    cartItems++;
+    cart.innerText = `Your Cart: ${cartItems} items`;
+  }
+}
