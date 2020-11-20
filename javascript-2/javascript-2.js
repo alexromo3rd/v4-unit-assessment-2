@@ -36,6 +36,9 @@ let foods = [
 */
 
 //CODE HERE
+foods.forEach(food => {
+  food.calories = (food.carbs * 4) + (food.protein * 4) + (food.fat * 9);
+})
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -81,6 +84,10 @@ const products = [
 */
 
 //CODE HERE
+let saleProducts = products.map(product => {
+  product.price = product.price - (product.price * 0.25);
+  return product
+});
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -91,6 +98,7 @@ const products = [
 */
 
 //CODE HERE
+let blueProducts = saleProducts.filter(product => product.color.includes('blue'));
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -100,6 +108,7 @@ const products = [
 */
 
 //CODE HERE
+let orderTotal = blueProducts.reduce((acc, curr) => acc += curr.price, 0);
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -130,6 +139,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let helensInfo = Object.assign({}, contactInfo, shippingInfo);
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -139,6 +149,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let ellensInfo = {...helensInfo, name: 'Ellen', email: 'ellen@email.com'};
 
 ////////////////////PROBLEM 7////////////////////
 /* 
@@ -146,6 +157,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let { email } = ellensInfo;
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -154,6 +166,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let { state, zipCode } = shippingInfo;
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
@@ -216,6 +229,7 @@ const userInfo = {
 */
 
 //CODE HERE
+let shouldAlert = userInfo.settings.alerts;
 
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -224,6 +238,7 @@ const userInfo = {
 */
 
 //CODE HERE
+let topic = userInfo.topics[userInfo.topics.length - 1];
 
 ////////////////////PROBLEM 11////////////////////
 /*
@@ -232,6 +247,7 @@ const userInfo = {
 */
 
 //CODE HERE
+let commenterId = userInfo.comments[1].responses[0].userId;
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -251,6 +267,33 @@ const userInfo = {
 */
 
 //CODE HERE
+let person = {
+  name: 'Alex',
+  age: 30,
+  jobs: ['Software Developer', 'Frontend Developer', 'Backend Developer'],
+  birthday: function() {
+    this.age += 1;
+  },
+  favorites: {
+    color: 'Blue',
+    number: 16,
+    book: 'The Alchemist'
+  },
+  kids: [
+    {
+      name: 'Leche',
+      age: 12
+    },
+    {
+      name: 'Tequila',
+      age: 9
+    },
+    {
+      name: 'Whiskey',
+      age: 8
+    }
+  ]
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -276,7 +319,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -289,6 +332,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
-//let context2 = global
+let context2 = window
+// let context2 = global
 //let context2 = workout
