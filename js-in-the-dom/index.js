@@ -23,10 +23,10 @@ let validateForm = (e) => {
     emailInput.style.border = '2px solid red';
     alert('Please enter an email address to subscribe!');
   } else {
-    emailList.push({name: nameInput.value, email: emailInput.value})
+    emailList.push({name: nameInput.value, email: emailInput.value});
     displayThankYou();
   }
-}
+};
 
 form.addEventListener('submit', validateForm);
 
@@ -36,5 +36,12 @@ let displayThankYou = () => {
   formContainer.innerText = 'Thank you for subscribing!';
   let removeMessage = () => formContainer.remove();
   setTimeout(removeMessage, 3000);
-}
+};
 
+nameInput.addEventListener('change', () => {
+  nameInput.style.border = 'none';
+});
+
+emailInput.addEventListener('change', () => {
+  emailInput.style.border = 'none';
+});
